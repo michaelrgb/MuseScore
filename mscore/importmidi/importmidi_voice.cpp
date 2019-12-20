@@ -33,6 +33,7 @@ int toIntVoiceCount(MidiOperations::VoiceCount value)
 
 int voiceLimit()
       {
+      return 1; // Disable addGroupSplits()
       const auto &opers = midiImportOperations.data()->trackOpers;
       const int currentTrack = midiImportOperations.currentTrack();
       const int allowedVoiceCount = toIntVoiceCount(opers.maxVoiceCount.value(currentTrack));

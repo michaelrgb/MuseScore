@@ -16,6 +16,7 @@ namespace MidiTuplet {
 
 int tupletVoiceLimit()
       {
+      return 1;
       const auto &opers = midiImportOperations.data()->trackOpers;
       const int currentTrack = midiImportOperations.currentTrack();
       const int allowedVoices = MidiVoice::toIntVoiceCount(opers.maxVoiceCount.value(currentTrack));
